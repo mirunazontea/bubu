@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>deschide!</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="lock-screen">
+    <img src="bebe.jpg" alt="Noi doi" class="bg-img" />
+    <div class="lock-content">
+      <h2>🔒 Introdu parola</h2>
+      <input type="password" id="password" placeholder="Parolă..." />
+      <button onclick="checkPassword()">Deschide</button>
+      <p class="hint">Hint: ziua noastră când am hotărât să fim împreună</p>
+    </div>
+  </div>
+
+  <div id="main-screen" style="display: none;">
+    <div class="heart" onmousedown="startHold()" onmouseup="endHold()">❤️</div>
+    <p>Ține apăsat pe inimă 3 secunde…</p>
+  </div>
+
+  <div id="message-screen" style="display: none;">
+    <h1>Departe, dar mereu lângă tine.</h1>
+    <p class="long-message">
+      Aș vrea să te țin în brațe și să îți zic că ești acasă. Acasă sufletește, mental și spiritual. Știu că îți este greu să fii mereu respins. Îmi doream ca vacanța asta să fie un refugiu după atâta timp greu. Te iubesc, te aud și sunt mândră de tine. Uită-te la mare și gândește-te cât de mult semeni cu ea. Suntem ca marea și cerul, nu putem trăi unul fără altul, ne oglindim mereu unul pe altul.
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
