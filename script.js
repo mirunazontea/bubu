@@ -1,21 +1,83 @@
-function checkPassword() {
-  const password = document.getElementById("password").value;
-  if (password === "0805") {
-    document.getElementById("lock-screen").style.display = "none";
-    document.getElementById("main-screen").style.display = "block";
-  } else {
-    alert("Parolă greșită. Încearcă din nou!");
-  }
+* {
+  box-sizing: border-box;
 }
 
-let holdTimer;
-function startHold() {
-  holdTimer = setTimeout(() => {
-    document.getElementById("main-screen").style.display = "none";
-    document.getElementById("message-screen").style.display = "block";
-  }, 3000); // 3 secunde
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fceff1;
+  color: #333;
+  text-align: center;
 }
 
-function endHold() {
-  clearTimeout(holdTimer);
+.bg-img {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(3px) brightness(0.7);
+}
+
+.lock-content {
+  position: absolute;
+  top: 20vh;
+  width: 100%;
+  padding: 20px;
+}
+
+input {
+  padding: 12px;
+  font-size: 1em;
+  border-radius: 8px;
+  border: none;
+  margin-top: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin-top: 10px;
+  background-color: #c44569;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #a03a55;
+}
+
+.hint {
+  font-size: 0.9em;
+  margin-top: 12px;
+  color: #eee;
+}
+
+.main-content {
+  padding-top: 25vh;
+}
+
+.heart {
+  font-size: 5em;
+  cursor: pointer;
+  animation: pulse 1.5s infinite;
+  user-select: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.long-message {
+  padding: 30px;
+  font-size: 1.2em;
+  line-height: 1.5;
+  max-width: 600px;
+  margin: auto;
 }
