@@ -3,25 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>deschide!</title>
+  <title>Mereu lângă tine</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Ecranul de parolă -->
   <div id="lock-screen">
     <img src="bebe.jpg" alt="Noi doi" class="bg-img" />
     <div class="lock-content">
       <h2>🔒 Introdu parola</h2>
       <input type="password" id="password" placeholder="Parolă..." />
       <button onclick="checkPassword()">Deschide</button>
-      <p class="hint">Hint: ziua noastră când am hotărât să fim împreună</p>
+      <p class="hint">🔑 Hint: ziua noastră când am hotărât să fim împreună</p>
     </div>
   </div>
 
+  <!-- Ecranul principal cu inimioara -->
   <div id="main-screen" style="display: none;">
-    <div class="heart" onmousedown="startHold()" onmouseup="endHold()">❤️</div>
-    <p>Ține apăsat pe inimă 3 secunde…</p>
+    <div class="main-content">
+      <div class="heart" onclick="handleHeartClick()">❤️</div>
+      <p>Atinge inima de 3 ori…</p>
+    </div>
   </div>
 
+  <!-- Ecranul cu mesajul -->
   <div id="message-screen" style="display: none;">
     <h1>Departe, dar mereu lângă tine.</h1>
     <p class="long-message">
@@ -32,3 +37,4 @@
   <script src="script.js"></script>
 </body>
 </html>
+
